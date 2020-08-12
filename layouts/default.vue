@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     checkUser() {
-      ;
+      debugger
       if (this.user) {
         this.$router.push("/dashboard");
       } else {
