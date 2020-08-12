@@ -1,20 +1,56 @@
 <template>
   <div>
-    <Nuxt />
+    <header>
+      <Header />
+    </header>
+
+    <body>
+      <div class="content">
+        <Nuxt />
+      </div>
+    </body>
   </div>
 </template>
 
+<script>
+import Header from "../components/header.vue";
+export default {
+  components: {
+    Header
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    user() {
+      return this.$store.state.auth.user;
+    }
+  },
+  methods: {
+    checkUser() {
+      ;
+      if (this.user) {
+        this.$router.push("/dashboard");
+      } else {
+        this.$router.push("/");
+      }
+    }
+  },
+  watch: {
+    user: function() {
+      this.checkUser();
+    }
+  },
+  mounted() {
+    this.checkUser();
+  }
+};
+</script>
+
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
