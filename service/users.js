@@ -1,5 +1,4 @@
 import { firebaseInit } from "./firebaseIns";
-import { resolve, reject } from "core-js/fn/promise";
 import { createUser } from "./authService";
 
 var db = firebaseInit.firestore();

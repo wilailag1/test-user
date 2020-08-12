@@ -1,22 +1,27 @@
 <template>
   <div>
-    <header>
-      <Header />
-    </header>
+    <div v-if="this.user">
+      <header>
+        <Header />
+      </header>
 
-    <body>
-      <div class="content">
-        <Nuxt />
-      </div>
-    </body>
+      <body>
+        <div class="content">
+          <Nuxt />
+        </div>
+      </body>
+    </div>
+    <Login v-else/>
   </div>
 </template>
 
 <script>
 import Header from "../components/header.vue";
+import Login from "./login.vue";
 export default {
   components: {
-    Header
+    Header,
+    Login
   },
   data() {
     return {};
@@ -28,11 +33,8 @@ export default {
   },
   methods: {
     checkUser() {
-      debugger
       if (this.user) {
         this.$router.push("/dashboard");
-      } else {
-        this.$router.push("/");
       }
     }
   },

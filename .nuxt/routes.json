@@ -1,0 +1,23 @@
+[
+  {
+    "name": "dashboard",
+    "path": "/dashboard",
+    "component": "/Users/imac/Desktop/test-user/pages/dashboard.vue",
+    "chunkName": "pages/dashboard",
+    "_name": "_66dc0b48"
+  },
+  {
+    "name": "userMangeMent",
+    "path": "/userMangeMent",
+    "component": "/Users/imac/Desktop/test-user/pages/userMangeMent.vue",
+    "chunkName": "pages/userMangeMent",
+    "_name": "_9b02e41a"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/imac/Desktop/test-user/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_33fffccc"
+  }
+]
